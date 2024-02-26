@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutAlign="start">
+    <div fxFlex="100%" fxFlex.lt-md="100%" fxFlex.lt-lg="50%" class="event-info-div">
+      <table datatable [dtOptions]="dtOptions" class="row-border hover event-info-table" id="eventInfoTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>DeviceEventClassId</th>
+            <th>DeviceProduct</th>
+            <th>DeviceVendor</th>
+            <th>detectionTime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of eventsData; let i = index" (click)="openModal(event)">
+            <td>{{ i + 1 }}</td>
+            <td>{{ event._fields.DeviceEventClassId }}</td>
+            <td>{{ event._fields.DeviceProduct }}</td>
+            <td>{{ event._fields.DeviceVendor }}</td>
+            <td>{{ event._rawDataFields.detectionTime }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th><input type="text" placeholder="Search No" name="search-id"/></th>
+            <th><input type="text" placeholder="Search DeviceEventClassId" name="search-DeviceEventClassId"/></th>
+            <th><input type="text" placeholder="Search DeviceProduct" name="search-DeviceProduct"/></th>
+            <th><input type="text" placeholder="Search DeviceVendor" name="search-DeviceVendor"/></th>
+            <th><input type="text" placeholder="Search detectionTime" name="search-detectionTime"/></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>

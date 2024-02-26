@@ -1,0 +1,29 @@
+.alert-wrapper {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ddd;
+}
+
+.alert-detail {
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.alert-detail.active {
+    background: #eee;
+}
+
+#name {
+    border-bottom: 1px solid #ddd;
+}
+/* 
+#description {
+    
+} */
+
+.buttons {
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}

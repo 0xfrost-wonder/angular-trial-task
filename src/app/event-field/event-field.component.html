@@ -1,0 +1,24 @@
+<!-- <h2 mat-dialog-title>{{ data.event.name }}</h2> -->
+<mat-dialog-content>
+  <div class="detail">
+    <b>Alert Name:</b> <span id="alert-name">{{ data.event.name }}</span>
+  </div>
+  <div class="detail" *ngFor="let item of data.event._fields | keyvalue" (click)="selectEvent(item.key)">
+    <b>{{ item.key }}:</b>&nbsp;  
+    <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
+    <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star"></i></button>
+    <br>
+    <span>{{ item.value }}</span>
+  </div>
+  <div class="detail" *ngFor="let item of data.event._rawDataFields | keyvalue" (click)="selectEvent(item.key)">
+    <b>{{ item.key }}:</b>&nbsp; 
+    <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
+    <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star" ></i></button>
+    <br>
+    <span>{{ item.value }}</span>
+  </div>
+  <!-- Other content fields -->
+</mat-dialog-content>
+<mat-dialog-actions class="modal-bottom">
+  <button mat-button (click)="dialogRef.close()">Close</button>
+</mat-dialog-actions>

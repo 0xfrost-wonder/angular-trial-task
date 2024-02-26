@@ -1,0 +1,23 @@
+<div class="alert-info-div">
+  <table class="alert-info-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Rule</th>
+        <th>Description</th>
+        <th>detectionTime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alert of alertInfo; let i = index" (click)="onRowClick(alert)">
+        <td>{{ i + 1 }}</td>
+        <td>{{ alert?.name }}</td>
+        <td>{{ alert?.rule }}</td>
+        <td>{{ alert?.description }}</td>
+        <td>{{ alert?.detectionTime }}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+

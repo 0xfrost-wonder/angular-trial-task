@@ -1,0 +1,28 @@
+<h1 *ngIf="!contentFieldData">You have received {{ alertsCount }} Alerts from SOAR EDGE</h1>
+<div *ngIf="contentFieldData">
+    <!-- <h4>{{ contentFieldData?.name }}</h4>
+    <p>{{ contentFieldData?.description }}</p> -->
+    <!-- Other content fields -->
+    <div class="alert-details">
+        <div class="detail">
+            <b>Alert Name:</b> <span id="alert-name"> {{ contentFieldData?.name }} </span>
+        </div>
+        <div class="detail">
+            <b>Rule:</b> <span id="rule"> {{ contentFieldData?.rule }} </span>
+        </div>
+        <div class="detail">
+            <b>Description:</b> <span id="description"> {{ contentFieldData?.description }} </span>
+        </div>
+        <div class="detail">
+            <b>Detection Time:</b> <span id="detection-time"> {{ contentFieldData?.detectionTime }} </span>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="favorite">Favorite</button>
+        
+        <button class="normal">Normal</button>
+    </div>
+</div>
+
+
+

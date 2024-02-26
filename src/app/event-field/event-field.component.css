@@ -1,0 +1,25 @@
+.modal-bottom {
+    justify-content: flex-end!important;
+}
+
+.favorite-star {
+    color: gold;
+    font-size: 14px;
+}
+
+.empty-star {
+    /* color: white; */
+    font-size: 14px;
+}
+
+.togglestar{
+    background-color: none;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.togglestar:focus {
+    outline:0;
+}

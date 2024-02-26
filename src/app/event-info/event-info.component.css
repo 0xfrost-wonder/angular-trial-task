@@ -1,0 +1,36 @@
+/* Style for the EventInfo table */
+.event-info-table {
+    inline-size: 100%; /* Make the table fill its container */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+/* Style for table header */
+.event-info-table th {
+    background-color: #f2f2f2; /* Light gray background color */
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding */
+    text-align: center; /* Align text to the left */
+}
+
+/* Style for table rows */
+.event-info-table td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding */
+    text-align: center;
+}
+
+/* Style for even table rows */
+.event-info-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+    
+/* Style for table rows on hover */
+.event-info-table tbody tr:hover {
+    background-color: #dddddd46; /* Change background color on mouse hover */
+}
+
+.event-info-div {
+    width: 100%;
+    overflow-x: auto;
+  }

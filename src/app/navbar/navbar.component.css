@@ -1,0 +1,21 @@
+.vertical-navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-navbar li {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.vertical-navbar li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+}
+
+.vertical-navbar li a:hover {
+    background-color: #2e313357;
+}
