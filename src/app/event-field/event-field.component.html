@@ -1,24 +1,57 @@
-<!-- <h2 mat-dialog-title>{{ data.event.name }}</h2> -->
-<mat-dialog-content>
-  <div class="detail">
-    <b>Alert Name:</b> <span id="alert-name">{{ data.event.name }}</span>
+<h2 class="mat-modal-title" mat-dialog-title><b>Detail Information</b></h2>
+<mat-dialog-content class="mat-modal-content">
+  <br>
+  <div class="detail" *ngFor="let item of data.event._rawDataFields | keyvalue">
+    <!-- <div *ngIf="data.isShowFavorite">
+      <div *ngIf="isFavorite(item.key)">
+        <b>event_{{ item.key }}:</b>&nbsp; 
+        <button class="togglestar" *ngIf="!isFavorite(item.key)" (click)="selectEvent(item.key)"><i class="fas fa-star empty-star"></i></button>
+        <button class="togglestar" *ngIf="isFavorite(item.key)" (click)="selectEvent(item.key)"><i class="fas fa-star favorite-star" ></i></button>
+        <br>
+        <span>{{ item.value }}</span>
+      </div>
+    </div> -->
+    <!-- <div *ngIf="!data.isShowFavorite"> -->
+    <div>
+        <b>event_{{ item.key }}:</b>&nbsp; 
+        <button class="togglestar" *ngIf="!isFavorite(item.key)" (click)="selectEvent(item.key)"><i class="fas fa-star empty-star"></i></button>
+        <button class="togglestar" *ngIf="isFavorite(item.key)" (click)="selectEvent(item.key)"><i class="fas fa-star favorite-star" ></i></button>
+        <br>
+        <span>{{ item.value }}</span>
+    </div>
   </div>
-  <div class="detail" *ngFor="let item of data.event._fields | keyvalue" (click)="selectEvent(item.key)">
-    <b>{{ item.key }}:</b>&nbsp;  
-    <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
-    <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star"></i></button>
-    <br>
-    <span>{{ item.value }}</span>
-  </div>
-  <div class="detail" *ngFor="let item of data.event._rawDataFields | keyvalue" (click)="selectEvent(item.key)">
-    <b>{{ item.key }}:</b>&nbsp; 
-    <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
-    <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star" ></i></button>
-    <br>
-    <span>{{ item.value }}</span>
-  </div>
+  <!-- <table class="event-field-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>field_Name</th>
+          <th>value</th>
+          <th>favorite</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data.event._fields | keyvalue; let i = index" (click)="selectEvent(item.key)">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.key }}</td>
+          <td>{{ item.value  }}</td>
+          <td> 
+            <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
+            <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star"></i></button>
+          </td>
+        </tr>
+        <tr *ngFor="let item of data.event._rawDataFields | keyvalue; let i = index" (click)="selectEvent(item.key)">
+          <td>{{ i + 6 }}</td>
+          <td>{{ item.key }}</td>
+          <td>{{ item.value  }}</td>
+          <td> 
+            <button class="togglestar" *ngIf="!isFavorite(item.key)"><i class="fas fa-star empty-star"></i></button>
+            <button class="togglestar" *ngIf="isFavorite(item.key)"><i class="fas fa-star favorite-star"></i></button>
+          </td>
+        </tr>
+      </tbody>
+  </table> -->
   <!-- Other content fields -->
 </mat-dialog-content>
 <mat-dialog-actions class="modal-bottom">
-  <button mat-button (click)="dialogRef.close()">Close</button>
+  <button class="modal-action-buttons" mat-button (click)="dialogRef.close()">Close</button>
 </mat-dialog-actions>

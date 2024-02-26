@@ -6,31 +6,85 @@
 
 /* Style for table header */
 .event-info-table th {
-    background-color: #f2f2f2; /* Light gray background color */
-    border: 1px solid #ddd; /* Add border to table cells */
+    background-color: transparent; /* Light gray background color */
+    border-bottom: 1px solid #a1a1a1; /* Add border to table cells */
+    color:white;
     padding: 8px; /* Add padding */
     text-align: center; /* Align text to the left */
 }
 
 /* Style for table rows */
 .event-info-table td {
-    border: 1px solid #ddd; /* Add border to table cells */
+    border-bottom: 1px solid #a1a1a1; /* Add border to table cells */
+    color:#a1a1a1;
     padding: 8px; /* Add padding */
     text-align: center;
 }
 
 /* Style for even table rows */
 .event-info-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row background color */
+    background-color: transparent; /* Alternate row background color */
 }
 
     
 /* Style for table rows on hover */
 .event-info-table tbody tr:hover {
     background-color: #dddddd46; /* Change background color on mouse hover */
+    border-radius: 5px;
 }
 
 .event-info-div {
     width: 100%;
     overflow-x: auto;
-  }
+}
+  
+.buttons {
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.favorite {
+    background-color: #565f6bb5;
+    box-shadow: 0rem 0.1875rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.09), 0rem 0.125rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.07);
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    line-height: 1.4;
+    text-align: center;
+    background-size: 150% !important;
+    background-position-x: 25% !important;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    padding: 0.35rem 1.2rem;
+    color: #ffffff;
+}
+
+.favorite:hover {
+    transform: scale(1.05);
+}
+
+.datatable_footer_filter_input {
+    background: #89898924;
+    border-width: thin;
+    color: #bdbaba;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 0.5px solid #718096;
+    height: 30px;
+    width: fit-content;
+    text-align: center;
+    padding: 5px 10px;
+    margin-inline: 20px;
+}

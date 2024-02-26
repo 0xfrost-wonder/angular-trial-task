@@ -14,7 +14,8 @@ import { FavoriteService } from '../favorite.service';
 
 
 export class EventInfoComponent implements OnInit {
-  
+  @Input() eventsData: any = {};
+  public eventsObject: any = {};
   constructor(
     private favoriteService: FavoriteService,
     public dialog: MatDialog
@@ -22,6 +23,7 @@ export class EventInfoComponent implements OnInit {
 
   @ViewChild(DataTableDirective, {static: false})
   isModalOpen: boolean = false;
+  isShowFavorite: boolean = false;
   selectedRow: any;
 
   datatableElement?: DataTableDirective;
@@ -29,8 +31,9 @@ export class EventInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pageLength:50,
+      pageLength:10,
     }
+    this.eventsObject = this.eventsData;
   }
   
   ngAfterViewInit(): void {
@@ -46,6 +49,7 @@ export class EventInfoComponent implements OnInit {
       data: {
         event,
         data2: this.favoriteService.getFavoriteItems(),
+        isShowFavorite: this.favoriteService.isShowFavorite,
         onRowClick: (itemKey: any) => {
           // console.log('Row clicked:', rowData);
           // Handle the row click here
@@ -76,5 +80,20 @@ export class EventInfoComponent implements OnInit {
     }
   }
 
-  @Input() eventsData: any = {};
+  toggleShow(){
+    this.isShowFavorite = !this.isShowFavorite;
+    this.favoriteService.isShowFavorite = this.isShowFavorite;
+    if(this.isShowFavorite){
+      this.removeObjectsWithoutKeys(this.favoriteService.getFavoriteItems())
+    }
+    else {
+      this.eventsObject = this.eventsData;
+    }
+  }
+
+  removeObjectsWithoutKeys(keys: any[]): void {
+    for (let i = 0; i < keys.length; i++) {
+      this.eventsObject = this.eventsObject.filter((item: any) => item._rawDataFields.hasOwnProperty( keys[i]));
+    }
+  }
 }

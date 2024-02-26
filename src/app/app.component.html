@@ -6,12 +6,11 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <svg
+      <div>
+        <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 982 239"
         fill="none"
@@ -55,8 +54,9 @@
           </linearGradient>
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
-      </svg>
-      <h1>Hello, {{ title }}</h1>
+        </svg>
+      </div>
+      <h1>Welcome to {{ title }}</h1>
       <br>
       <app-navbar (itemSelected)="onItemSelected($event)" [alertsCount]="alertInfo.length"></app-navbar>
     </div>

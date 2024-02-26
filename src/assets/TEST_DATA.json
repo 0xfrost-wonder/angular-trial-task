@@ -115,7 +115,7 @@
                 "detection_ruleLabels_rule_name": "SCC: Discovery: Service Account Self-Investigation with Resource Creation",
                 "detection_outcomes_roles": "roles/storage.objectAdmin",
                 "detection_outcomes_principal_email_address": "sa-cron-vm@scce-lab-401713.iam.gserviceaccount.com",
-                "detection_outcomes_risk_score": "90",
+
                 "detection_outcomes_vendor_name": "Google",
                 "detection_outcomes_product_name": "Security Command Center"
             },

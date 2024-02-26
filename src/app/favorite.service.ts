@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class FavoriteService {
   private favoriteItems: any[] = [];
-
+  public isShowFavorite: boolean = false;
   constructor() { }
 
   addFavoriteItem(item: any): void {

@@ -6,7 +6,7 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
   standalone: true,
   imports: [ CommonModule, MatDialogModule],
   templateUrl: './event-field.component.html',
-  styleUrl: './event-field.component.css'
+  styleUrl: './event-field.component.css',
 })
 
 export class EventFieldComponent implements OnInit {

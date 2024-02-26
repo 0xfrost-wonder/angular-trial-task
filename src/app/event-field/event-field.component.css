@@ -3,7 +3,12 @@
 }
 
 .favorite-star {
-    color: gold;
+    color: #fff900;
+    font-size: 14px;
+}
+
+.empty-star {
+    color: ghostwhite;
     font-size: 14px;
 }
 
@@ -22,4 +27,86 @@
 
 .togglestar:focus {
     outline:0;
+}
+
+/* Style for the EventInfo table */
+.event-field-table {
+    inline-size: 100%; /* Make the table fill its container */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+/* Style for table header */
+.event-field-table th {
+    background-color: #f2f2f2; /* Light gray background color */
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding */
+    text-align: center; /* Align text to the left */
+}
+
+/* Style for table rows */
+.event-field-table td {
+    max-width: 30px;
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding */
+    text-align: center;
+    text-wrap: 10;
+    /* text-decoration-line: overline; */
+}
+
+/* Style for even table rows */
+.event-field-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+    
+/* Style for table rows on hover */
+.event-field-table tbody tr:hover {
+    background-color: #dddddd46; /* Change background color on mouse hover */
+}
+
+
+.mat-modal-title{
+    background: #d4d4d5;
+    display: flex;
+    justify-content: center;
+    padding: 0.35rem 1.2rem;
+}
+
+.mat-modal-content{
+    background: #d4d4d5;
+}
+
+.modal-bottom{
+    background: #d4d4d5;
+}
+
+.modal-action-buttons{
+    background-color: #565f6bb5;
+    box-shadow: 0rem 0.1875rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.09), 0rem 0.125rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.07);
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    line-height: 1.4;
+    text-align: center;
+    background-size: 150% !important;
+    background-position-x: 25% !important;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    padding: 0.35rem 1.2rem;
+    color: #ffffff;
+}
+
+
+.modal-action-buttons:hover {
+    transform: scale(1.05);
 }

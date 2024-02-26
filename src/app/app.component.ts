@@ -25,6 +25,7 @@ import { TeamInfoComponent } from "./team-info/team-info.component";
 // })
 
 export class AppComponent implements OnInit {
+
   constructor() { }
   
   jsonData = require('../assets/TEST_DATA.json');
@@ -73,7 +74,7 @@ export class AppComponent implements OnInit {
 
   eventsData: any = this.jsonData.Events;
   
-  title = 'trial SOAR';
+  title = 'SOAR Widget';
 }
 function convertMillisecondsToDateTime(milliseconds: number): string {
     const date: Date = new Date(milliseconds);
