@@ -160,9 +160,18 @@ main {
   float: left;
 }
 
+.left-side div img {
+  max-inline-size: 100%;
+  block-size: auto;
+  /* aspect-ratio: 2/1; */
+  object-fit: cover;
+
+}
+
 .left-side h1 {
   text-align: center;
 }
+
 .right-side {
   width: 75%;
   float: center;
